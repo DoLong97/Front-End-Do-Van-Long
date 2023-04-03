@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'NotoSansCJKJP';
+  src: local('NotoSansCJKJP'), url(./fonts/NotoSansCJKJP/NotoSansJP-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJKJP';
+    font-weight: 900;
+    src: local('NotoSansCJKJP'), url(./fonts/NotoSansCJKJP/NotoSansJP-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'NotoSansCJKJP';
+    font-weight: 900;
+    src: local('NotoSansCJKJP'), url(./fonts/NotoSansCJKJP/NotoSansJP-Black.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSansCJKJP';
+  font-weight: 900;
+  src: local('NotoSansCJKJP'), url(./fonts/NotoSansCJKJP/NotoSansJP-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter/Inter-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 900;
+    src: local('Inter'), url(./fonts/Inter//Inter-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 900;
+    src: local('Inter'), url(./fonts/Inter/Inter-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), url(./fonts/Inter/Inter-Light.ttf) format('truetype');
+}
