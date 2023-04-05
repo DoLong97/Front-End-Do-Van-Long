@@ -2,7 +2,7 @@
 import { css } from "@emotion/css";
 import styled from "@emotion/styled";
 import React, { memo, useEffect, useState } from "react";
-import { getMyRecordDiary, getMyRecordExercises, MyRecordProps, RecordDiaryProps } from "../../api/MyRecord.api";
+import { getMyRecommends, getMyRecordDiary, getMyRecordExercises, MyRecordProps, RecommendProps, RecordDiaryProps } from "../../api/MyRecord.api";
 import { Button } from "../../components/Button";
 import { Diary } from "../../components/Diary/Diary";
 import { Exercise } from "../../components/Exercise/Exercise";
@@ -16,21 +16,23 @@ function _MyRecordPage() {
 
     const [exercises, setExercises] = useState<MyRecordProps[]>([])
     const [diary, setDiary] = useState<RecordDiaryProps[]>([])
+    const [recommend, setRecommend] = useState<RecommendProps[]>([])
+
 
     useEffect(() => {
         getMyRecordExercises().then((res) => setExercises(res));
         getMyRecordDiary().then((res) => setDiary(res));
+        getMyRecommends().then((res) => setRecommend(res));
     }, []);
 
     return (
         <StyledWrapper>
 
-
             <Section>
                 <StyledRecord>
-                    <Record textBody="BODY RECORD" text="自分のカラダの記録"/>
-                    <Record textBody="MY EXERCISE" text="自分の運動の記録"/>
-                    <Record textBody="MY DIARY" text="自分の日記"/>
+                    { recommend?.map((_recommend) => (
+                        <Record {..._recommend} key={_recommend.id} />
+                    ))}
                 </StyledRecord>
             </Section>
 

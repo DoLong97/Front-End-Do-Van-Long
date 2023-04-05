@@ -1,9 +1,22 @@
+import Recommend1Image from "../assets/images/MyRecommend-1.jpg";
+import Recommend2Image from "../assets/images/MyRecommend-2.jpg"
+import Recommend3Image from "../assets/images/MyRecommend-3.jpg"
+
+
 export interface MyRecordProps {
   id: number;
   time: string;
   text: string;
   kcal: string;
 }
+
+export interface RecommendProps {
+  id: number;
+  imageUrl: string;
+  text: string;
+  textBody: string;
+}
+
 
 export interface RecordDiaryProps {
   id: number;
@@ -128,4 +141,32 @@ export const getMyRecordDiary = (): Promise<RecordDiaryProps[]> => {
     }, 0);
   });
 };
+
+export const getMyRecommends = (): Promise<RecommendProps[]> => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res([
+        {
+          id: 1,
+          imageUrl: Recommend1Image,
+          text: "自分のカラダの記録",
+          textBody: "BODY RECORD",
+        },
+        {
+          id: 2,
+          imageUrl: Recommend2Image,
+          text: "自分の運動の記録",
+          textBody: "MY EXERCISE",
+        },
+        {
+          id: 3,
+          imageUrl: Recommend3Image,
+          text: "自分の日記",
+          textBody: "MY DIARY",
+        },
+      ]);
+    }, 0);
+  });
+};
+
 

@@ -19,6 +19,7 @@ export const Record = React.memo((props: RecordProps) => {
   const { imageUrl, text, textBody} = props;
   return(
     <StyledWrapper>
+      <div className={backgroundCss} />
       <img
           src={imageUrl || MyRecommend1Image}
           alt={""}
@@ -48,17 +49,27 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledBodyText = styled.div`
- display: flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between ;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   width: calc(100% - 48px);
   gap: 10px;
+`;
+
+const backgroundCss = css`
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
 `;
 
 const StyledText = styled.div`
@@ -90,5 +101,4 @@ const imageCss =  css`
   object-fit: cover;
   background: #000000;
   mix-blend-mode: luminosity;
-  opacity: 0.9;
 `
