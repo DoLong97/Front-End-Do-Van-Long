@@ -33,7 +33,7 @@ const StyledWrapper = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 5;
   position: fixed;
 `;
 

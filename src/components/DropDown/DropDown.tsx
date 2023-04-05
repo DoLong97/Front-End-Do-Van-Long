@@ -105,7 +105,7 @@ const dropdownContentCss = css`
     overflow: auto;
     box-shadow: 0px 8px 16px 0px ${Colors.DARK_5};
     right: 0;
-    z-index: 1;
+    z-index: 4;
     top: 30px;
 
     a {
